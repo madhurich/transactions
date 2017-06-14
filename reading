@@ -1,0 +1,44 @@
+> create a folder called css in assets
+> create a file called style.scss
+> open ruby command as admin
+> hit C: (what ever the directory you are in)
+> hit the path you are in (css-->style.scss)
+
+
+> gem install compass
+
+YOU GOT AN ERROR WHILE INSTALLING THIS
+REFER https://stackoverflow.com/questions/27435841/windows-7-64-bit-could-not-find-a-valid-gem-compass-0-here-is-why-unab
+
+		1. DOWNLOAD  http://curl.haxx.se/ca/cacert.pem
+		2. save the file anywhere Ex: in drive C:
+		C:\cacert.pem
+		3. set SSL_CERT_FILE=C:\cacert.pem
+		4. now try gem install compass
+> gem install sass
+> sass --watch style.scss:style.css
+
+
+https://stackoverflow.com/questions/14618028/remove-borders-around-html-input
+https://stackoverflow.com/questions/15374918/how-to-put-two-div-boxes-side-by-side
+https://www.w3schools.com/cssref/pr_background-position.asp
+https://stackoverflow.com/questions/23264789/angularjs-ng-repeat-to-assign-generate-a-new-unique-id
+https://www.w3schools.com/css/css_border.asp
+https://stackoverflow.com/questions/23561585/how-to-remove-vertical-line-from-html-table
+https://stackoverflow.com/questions/20612484/angularjs-separating-directive-files-but-staying-on-the-same-module
+
+https://stackoverflow.com/questions/4611754/javascript-convert-seconds-to-a-date-object
+
+https://stackoverflow.com/questions/35949786/angular-js-uncaught-error-injectornomod-module-unavailable
+
+------
+when you chnaged teh directive definition, to
+aangular.module('a.b', [])
+	.directive('some', some);//in index first load this directive
+
+angular.module('a.b')
+		.controller('someCtrl', someCtrl)
+
+while including this in index, first you need to include the directive file and then 
+the controller attached to this directive.
+
