@@ -6,7 +6,7 @@
 	function transactions(){
 		var directive = {
 			template: '<div id="transactions">' + 
-						'<header><span>Recent Transactions</span></header>' +
+						'<header><img style="float:left;" src="../assets/icons/briefcase.png"/><span>Recent Transactions</span></header>' +
 						'<div class="table-content">' + 
 							'<table>' + 
 								'<tr ng-repeat="item in vm.transactions">' + 

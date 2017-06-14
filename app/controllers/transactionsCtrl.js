@@ -16,10 +16,10 @@
 			
 
 		}
-		console.log(dates);
+		// console.log(dates);
 		
 		$timeout(function() {
-			console.log(document.getElementById('color-0'));
+			// console.log(document.getElementById('color-0'));
 			for(var j = 0; j < colors.length; j++){
 				document.getElementById('color-' + j).style.backgroundColor = colors[j];
 				
@@ -32,7 +32,7 @@
 				month = months[d.getMonth()];
 				datem = d.getDate();
 				document.getElementById('date-' + k).innerHTML = month.substr(0, 3) + ".  " + datem;
-				console.log(datem);
+				// console.log(datem);
 		}
 
 		}, 10);
