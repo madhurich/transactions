@@ -22,7 +22,25 @@
 		tc.onSubmit = onSubmit;
 
 		function onSubmit(frm, to, amt){
-			$state.go('preview', {frm: frm, to: to, amt: amt});
+			if(emptyInputs(to, amt)){
+				alert('enter valid details');
+			}
+			if(amt > available){
+				alert('funds insufficient');
+			}
+			if(!emptyInputs(to, amt) && amt < available){
+				$state.go('preview', {frm: frm, to: to, amt: amt});
+			}
+			
 		}
+
+		function emptyInputs(to, amt){
+			if(!to || !amt){
+				// alert('enter valid details');
+				return true;
+			}
+		}
+
+
 	}		
 })();

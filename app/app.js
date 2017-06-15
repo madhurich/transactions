@@ -7,7 +7,7 @@
 					'previewTrans'
 					]);
 	angular.module('makeATrans')
-			.config( config);
+			.config(config);
 
 	config.$inject = ['$urlRouterProvider', '$stateProvider'];		
 
