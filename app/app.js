@@ -1,22 +1,31 @@
 (function(){
 	'use strict';
 	angular.module('makeATrans', [
-					'ngRoute',
+					'ui.router',
 					'newTrans', 
-					'existingTrans'
+					'existingTrans',
+					'previewTrans'
 					]);
 	angular.module('makeATrans')
 			.config( config);
 
-	config.$inject = ['$routeProvider'];		
+	config.$inject = ['$urlRouterProvider', '$stateProvider'];		
 
-	function config($routeProvider){
-		$routeProvider
-			.when('/', {
+	function config($urlRouterProvider, $stateProvider){
+		$urlRouterProvider.otherwise('/');
+		$stateProvider
+			.state('home', {
+				url: '/',
 				template: '<transfer></transfer><transactions></transactions>'
 			})
-			.otherwise({
-				redirectTo: '/'
+			.state('preview', {
+				url: '/preview',
+				params: {
+					frm: null,
+					to: null,
+					amt: null
+				},
+				template: '<preview></preview>'
 			});
 
 	}		
