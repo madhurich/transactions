@@ -21,7 +21,7 @@
 								'<input type="text" ng-model="tc.amt"/><br/>' +
 							'</div>' +
 							'<div class="form-group submit">' + 
-								'<button ng-click="tc.onSubmit(tc.disabledString, tc.to, tc.amt)">Submit</button>' + 
+								'<button class="btn" ng-click="tc.onSubmit(tc.disabledString, tc.to, tc.amt)">Submit</button>' + 
 							'</div>' +	
 							
 						'</form>' +
